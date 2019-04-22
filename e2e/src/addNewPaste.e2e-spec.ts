@@ -15,13 +15,11 @@ describe('Add-New-Paste page', () => {
   const mainPage: Pastebin = new Pastebin();
 
   beforeEach(() => {
-
     addPastePage.navigateToHome();
   });
 
 
   it('should have an Create Paste button and modal window', () => {
-
     expect(addPastePage.isCreateButtonPresent()).toBeTruthy('The button should exist');
     expect(addPastePage.isCreatePasteModalPresent()).toBeFalsy('The modal window shouldn\'t appear, not yet!');
 
