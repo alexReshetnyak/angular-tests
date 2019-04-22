@@ -20,9 +20,7 @@ export class AddPasteComponent implements OnInit {
   ngOnInit() {  }
   // * createPaste() gets invoked from the template. This shows the Modal
   public createPaste(): void {
-
     this.showModal = true;
-
   }
 
   // * onSave() pushes the newPaste property into the server

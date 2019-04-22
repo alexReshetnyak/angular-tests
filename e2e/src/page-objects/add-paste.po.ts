@@ -1,7 +1,8 @@
 
 import { browser, by, element, promise, ElementFinder, ElementArrayFinder } from 'protractor';
 import { Base } from './base.po';
-export class AddPaste extends Base  {
+
+export class AddPaste extends Base {
 	
 	getAddPaste():ElementFinder {
 		return element(by.tagName('app-add-paste'));
@@ -39,8 +40,7 @@ export class AddPaste extends Base  {
 		return this.getSaveButton().click();
 	}
 
-	/*Close button */
-
+	// * Close button
 	getCloseButton(): ElementFinder {
 		return this.getAddPaste().element(by.buttonText("Close"));
 	}
@@ -50,7 +50,7 @@ export class AddPaste extends Base  {
 	}
 	
 
-	/* Get Input Paste values from the Modal window */
+	// * Get Input Paste values from the Modal window
 	getInputPasteValues():any {
 		let inputTitle, inputLanguage, inputPaste;
 
@@ -61,8 +61,7 @@ export class AddPaste extends Base  {
 		
 	}
 
-	/* Add a new Paste */
-
+	// * Add a new Paste
 	addNewPaste():any {
 		let newPaste: any = this.getMockPaste();
 
@@ -74,7 +73,4 @@ export class AddPaste extends Base  {
   		return Object.keys(newPaste).map(key => newPaste[key]);
 
 	}
-
-
-
 }

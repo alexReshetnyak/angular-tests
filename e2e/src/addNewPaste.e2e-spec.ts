@@ -11,7 +11,6 @@ import { browser, protractor } from 'protractor';
 */
 
 describe('Add-New-Paste page', () => {
-
   const addPastePage: AddPaste = new AddPaste();
   const mainPage: Pastebin = new Pastebin();
 
@@ -19,6 +18,7 @@ describe('Add-New-Paste page', () => {
 
     addPastePage.navigateToHome();
   });
+
 
   it('should have an Create Paste button and modal window', () => {
 
@@ -28,12 +28,10 @@ describe('Add-New-Paste page', () => {
     addPastePage.clickCreateButton();
 
     expect(addPastePage.isCreatePasteModalPresent()).toBeTruthy('The modal window should appear now');
-
-
   });
 
-  it('should accept and save input values', () => {
 
+  it('should accept and save input values', () => {
     addPastePage.clickCreateButton();
 
     const emptyInputValues = ['', '', ''];
@@ -46,16 +44,14 @@ describe('Add-New-Paste page', () => {
 
     expect(addPastePage.isCreatePasteModalPresent()).toBeFalsy('The modal window should be gone');
     expect(mainPage.getLastRowData()).toContain('Something here');
-
   });
 
-  it('close button should work', () => {
 
+  it('close button should work', () => {
     addPastePage.clickCreateButton();
     addPastePage.clickCloseButton();
 
     expect(addPastePage.isCreatePasteModalPresent()).toBeFalsy('The modal window should be gone');
-
   });
 
 });

@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "pree2e": "webdriver-manager update --standalone false --gecko false --versions.chrome 2.44npm ",
-    "e2e": "ng e2e --webdriver-update=false"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
